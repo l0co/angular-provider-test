@@ -3,15 +3,18 @@ import {CommonModule} from '@angular/common';
 import {FirstComponent} from "./first/first.component";
 import {SecondComponent} from "./second/second.component";
 import {RouterModule, Routes} from "@angular/router";
+import {MainComponent} from "./main/main.component";
 
 const routes: Routes = [
-  {path: 'first', component: FirstComponent},
-  {path: 'second', component: SecondComponent},
-  {path: '', redirectTo: 'first'}
+  {path: 'main', component: MainComponent, children: [
+      {path: 'first', component: FirstComponent},
+      {path: 'second', component: SecondComponent}
+    ]},
+  {path: '', redirectTo: 'main/first'}
 ];
 
 @NgModule({
-  declarations: [FirstComponent, SecondComponent],
+  declarations: [FirstComponent, SecondComponent, MainComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
