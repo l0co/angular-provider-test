@@ -14,7 +14,7 @@ import {ModuleShared2Module} from "./module-shared-2/module-shared-2.module";
     BrowserModule,
     AppRoutingModule,
     ModuleSharedModule,
-    ModuleShared2Module
+    ModuleShared2Module.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
