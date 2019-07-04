@@ -2,10 +2,11 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
+  {path: 'parent', loadChildren: () => import('./module-parent/module-parent.module').then(mod => mod.ModuleParentModule)},
   {path: 'lazy', loadChildren: () => import('./module-lazy/module-lazy.module').then(mod => mod.ModuleLazyModule)},
   {path: 'for-root', loadChildren: () => import('./module-for-root/module-for-root.module').then(mod => mod.ModuleForRootModule)},
   {path: 'provided-id', loadChildren: () => import('./module-provided-in/module-provided-in.module').then(mod => mod.ModuleProvidedInModule)},
-  {path: '', redirectTo: 'lazy', pathMatch: 'full'}
+  {path: '', redirectTo: 'parent', pathMatch: 'full'}
 ];
 
 @NgModule({

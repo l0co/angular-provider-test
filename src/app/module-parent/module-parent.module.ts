@@ -4,7 +4,6 @@ import {FirstComponent} from "./first/first.component";
 import {SecondComponent} from "./second/second.component";
 import {RouterModule, Routes} from "@angular/router";
 import {MainComponent} from './main/main.component';
-import {ModuleSharedModule} from "../module-shared/module-shared.module";
 
 const routes: Routes = [
   {path: 'main', component: MainComponent, children: [
@@ -18,8 +17,7 @@ const routes: Routes = [
   declarations: [FirstComponent, SecondComponent, MainComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes),
-    ModuleSharedModule
+    RouterModule.forChild(routes)
   ]
 })
-export class ModuleLazyModule { }
+export class ModuleParentModule { }
