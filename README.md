@@ -1,8 +1,6 @@
 # Angular Dependency Injection test
 
-Test for Angular dependency injection features and `forRoot()` providers.
-
-[//]: # (TODOLF add article link)
+Source code for [Angular dependency injection and forRoot()](http://lifeinide.com/post/2019-07-07-angular-dependency-injection-for-root/) article.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
 
